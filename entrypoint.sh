@@ -11,3 +11,5 @@ if [ ! -e "$PASSWD" ]; then
 fi
 
 cp "$CONF" /etc/nginx/conf.d/
+
+chown -R www-data:www-data /webdav_media
