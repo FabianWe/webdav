@@ -1,0 +1,1 @@
+This is a docker image for a simple webdav server using nginx and basic auth. It was inspired by [sashgorokhov/docker-nginx-webdav](https://github.com/sashgorokhov/docker-nginx-webdav). However I added some support for multiple users and use SHA-512 for password ecnryption.
