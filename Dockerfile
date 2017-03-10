@@ -4,7 +4,13 @@ MAINTAINER Fabian Wenzelmann <fabianwen@posteo.eu>
 # whois is required for mkpasswd
 RUN apt-get update && apt-get install -y nginx nginx-extras whois
 
-VOLUME /media
+RUN usermod -u 1000 www-data
+
+RUN mkdir /webdav_media
+RUN chown -R www-data:www-data /webdav_media
+
+# VOLUME /media
+VOLUME /webdav_media
 VOLUME /webdav
 
 COPY webdav.conf /default.conf

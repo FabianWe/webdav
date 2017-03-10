@@ -1,7 +1,7 @@
 webdav:
   image: fabianwe/webdav
   volumes:
-    - ./media:/media
+    - ./media:/webdav_media
     - ./webdav_conf:/webdav
   ports:
     - 80:80
